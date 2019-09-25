@@ -9,11 +9,20 @@ const connect = function() {
     host: '192.168.43.245',
     port: 50541
   });
+  console.log('Connected to snake server')
+  conn.on('connect', () => {
+    conn.write('Name: LG');
+  });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
-
   return conn;
-}
+} 
+
+// connect(  {
+//   conn.on('connect', () => {
+//     conn.write("Move: up");
+//   });
+// });
 
 console.log('Connecting ...');
 connect();
