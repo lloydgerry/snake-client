@@ -18,13 +18,4 @@ const connect = function() {
   return conn;
 } 
 
-// connect(  {
-//   conn.on('connect', () => {
-//     conn.write("Move: up");
-//   });
-// });
-
-console.log('Connecting ...');
-connect();
-
 module.exports = connect;
